@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú — Café del Centro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo">Café del Centro</a>
+        <nav class="navbar__nav" aria-label="Navegación principal">
+          <a href="index.html#nosotros" class="navbar__link">Nosotros</a>
+          <a href="index.html#productos" class="navbar__link">Productos</a>
+          <a href="index.html#horarios" class="navbar__link">Horarios</a>
+          <a href="index.html#contacto" class="navbar__link navbar__link--cta">Contacto</a>
+        </nav>
+        <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO MENÚ -->
+    <section class="menu-hero">
+      <span class="menu-hero__eyebrow">Temporada 2025</span>
+      <h1 class="menu-hero__title">Nuestra Carta</h1>
+      <p class="menu-hero__sub">Todo preparado al momento. Ingredientes de estación.</p>
+    </section>
+
+    <main class="menu-main">
+
+      <!-- FILTROS -->
+      <div class="menu-filters" role="tablist" aria-label="Categorías del menú">
+        <button class="filter-btn filter-btn--active" data-filter="all" role="tab">Todo</button>
+        <button class="filter-btn" data-filter="cafes" role="tab">Cafés</button>
+        <button class="filter-btn" data-filter="frios" role="tab">Bebidas frías</button>
+        <button class="filter-btn" data-filter="comidas" role="tab">Para comer</button>
+        <button class="filter-btn" data-filter="especiales" role="tab">Especiales</button>
+      </div>
+
+      <!-- CATEGORÍA: CAFÉS -->
+      <section class="menu-category" data-category="cafes">
+        <h2 class="menu-category__title">
+          <span class="menu-category__icon" aria-hidden="true">☕</span>
+          Cafés
+        </h2>
+        <div class="menu-grid">
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Espresso</h3>
+                <span class="menu-card__price">$1.800</span>
+              </div>
+              <p class="menu-card__desc">Shot corto de 30 ml. Intenso, con crema densa y notas de chocolate amargo.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Fuerte</span>
+                <span class="tag">Sin lactosa</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Cappuccino</h3>
+                <span class="menu-card__price">$2.400</span>
+              </div>
+              <p class="menu-card__desc">Espresso doble con leche texturizada y espuma sedosa. Arte latte incluido.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Clásico</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Latte</h3>
+                <span class="menu-card__price">$2.600</span>
+              </div>
+              <p class="menu-card__desc">Suave y cremoso. Disponible con leche de vaca, avena o almendras.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Plant-based</span>
+                <span class="tag">Suave</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Cortado</h3>
+                <span class="menu-card__price">$2.100</span>
+              </div>
+              <p class="menu-card__desc">Espresso con un toque de leche caliente. Para los que quieren sabor sin suavizar demasiado.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Balanceado</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Flat White</h3>
+                <span class="menu-card__price">$2.700</span>
+              </div>
+              <p class="menu-card__desc">Espresso doble en vaso pequeño con microespuma aterciopelada. Más intenso que el latte.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Intenso</span>
+                <span class="tag">Origen único</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Café de filtro</h3>
+                <span class="menu-card__price">$2.200</span>
+              </div>
+              <p class="menu-card__desc">V60 o Chemex según el grano del día. Limpio, floral y complejo. Ideal para el que quiere explorar.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Filtrado</span>
+                <span class="tag">Sin lactosa</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CATEGORÍA: BEBIDAS FRÍAS -->
+      <section class="menu-category" data-category="frios">
+        <h2 class="menu-category__title">
+          <span class="menu-category__icon" aria-hidden="true">🧊</span>
+          Bebidas frías
+        </h2>
+        <div class="menu-grid">
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Cold Brew</h3>
+                <span class="menu-card__price">$2.900</span>
+              </div>
+              <p class="menu-card__desc">Café infusionado en frío durante 18 horas. Suave, bajo en acidez y con notas de caramelo.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Sin lactosa</span>
+                <span class="tag">Refrescante</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Iced Latte</h3>
+                <span class="menu-card__price">$2.800</span>
+              </div>
+              <p class="menu-card__desc">Espresso sobre hielo con leche fría. Rápido, rico y muy de verano.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Plant-based</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Matcha Latte frío</h3>
+                <span class="menu-card__price">$3.100</span>
+              </div>
+              <p class="menu-card__desc">Matcha ceremonial japonés con leche de avena sobre hielo. Sin café, sin azúcar agregada.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Sin cafeína</span>
+                <span class="tag">Vegano</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Limonada de jengibre</h3>
+                <span class="menu-card__price">$2.500</span>
+              </div>
+              <p class="menu-card__desc">Limón exprimido, jengibre fresco y agua con gas. Liviana y bien despertadora.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Sin cafeína</span>
+                <span class="tag">Vegano</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CATEGORÍA: PARA COMER -->
+      <section class="menu-category" data-category="comidas">
+        <h2 class="menu-category__title">
+          <span class="menu-category__icon" aria-hidden="true">🥐</span>
+          Para comer
+        </h2>
+        <div class="menu-grid">
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Medialunas (x3)</h3>
+                <span class="menu-card__price">$1.500</span>
+              </div>
+              <p class="menu-card__desc">De manteca, recién horneadas. Doradas por fuera, tiernas por dentro. Clásico porteño.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Panadería propia</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Tostado caprese</h3>
+                <span class="menu-card__price">$3.400</span>
+              </div>
+              <p class="menu-card__desc">Pan de masa madre, mozzarella fresca, tomate asado y albahaca. Con pesto casero.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Vegetariano</span>
+                <span class="tag">Masa madre</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Bowl de avena</h3>
+                <span class="menu-card__price">$3.200</span>
+              </div>
+              <p class="menu-card__desc">Avena con leche de avena, banana, granola artesanal, miel y semillas de chía.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Vegano</span>
+                <span class="tag">Sin gluten</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Tostado de palta</h3>
+                <span class="menu-card__price">$3.800</span>
+              </div>
+              <p class="menu-card__desc">Pan de centeno, palta, huevo poché, semillas y limón. Almuerzo en una sola plato.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Vegetariano</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Scone de queso</h3>
+                <span class="menu-card__price">$2.200</span>
+              </div>
+              <p class="menu-card__desc">Scone salado con queso gruyere y ciboulette. Ideal con el café de la mañana.</p>
+              <div class="menu-card__tags">
+                <span class="tag">Panadería propia</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CATEGORÍA: ESPECIALES -->
+      <section class="menu-category" data-category="especiales">
+        <h2 class="menu-category__title">
+          <span class="menu-category__icon" aria-hidden="true">✨</span>
+          Especiales de la casa
+        </h2>
+        <div class="menu-grid">
+
+          <article class="menu-card menu-card--featured">
+            <div class="menu-card__badge">Estrella de la semana</div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Café de autor</h3>
+                <span class="menu-card__price">$3.500</span>
+              </div>
+              <p class="menu-card__desc">Preparación variable según el barista. Esta semana: espresso con infusión de cardamomo y leche de coco espumada.</p>
+              <div class="menu-card__tags">
+                <span class="tag tag--gold">Edición limitada</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card menu-card--featured">
+            <div class="menu-card__badge">Favorito del local</div>
+            <div class="menu-card__body">
+              <div class="menu-card__header">
+                <h3 class="menu-card__name">Affogato</h3>
+                <span class="menu-card__price">$3.200</span>
+              </div>
+              <p class="menu-card__desc">Bola de helado de vainilla artesanal con un shot de espresso caliente encima. Postre y café en uno.</p>
+              <div class="menu-card__tags">
+                <span class="tag tag--gold">Postre</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">Café del Centro</span>
+          <p class="footer__tagline">Granos de origen único.<br />Tostado propio. Desde 2010.</p>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Horarios</h3>
+          <ul class="footer__list">
+            <li><span>Lun – Vie</span><span>7:00 – 21:00 hs</span></li>
+            <li><span>Sáb – Dom</span><span>9:00 – 18:00 hs</span></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Contacto</h3>
+          <ul class="footer__list footer__list--contact">
+            <li>Av. Corrientes 1234, CABA</li>
+            <li>+54 11 4567-8901</li>
+            <li><a href="mailto:hola@cafedelcentro.com.ar">hola@cafedelcentro.com.ar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 Café del Centro · Todos los derechos reservados.</p>
+        <p class="footer__credit">Hecho con café ☕ en Buenos Aires</p>
+      </div>
+    </footer>
+
+    <script>
+      // Navbar scroll
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('navbar--scrolled', window.scrollY > 40);
+      });
+      // Mobile toggle
+      const toggle = document.querySelector('.navbar__toggle');
+      const nav    = document.querySelector('.navbar__nav');
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('navbar__nav--open');
+        toggle.classList.toggle('navbar__toggle--open');
+      });
+      // Filtros
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const categories  = document.querySelectorAll('.menu-category');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+          btn.classList.add('filter-btn--active');
+          const filter = btn.dataset.filter;
+          categories.forEach(cat => {
+            if (filter === 'all' || cat.dataset.category === filter) {
+              cat.style.display = '';
+            } else {
+              cat.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

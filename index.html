@@ -14,6 +14,23 @@
   </head>
   <body>
 
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a href="#" class="navbar__logo">Café del Centro</a>
+        <nav class="navbar__nav" aria-label="Navegación principal">
+          <a href="#nosotros" class="navbar__link">Nosotros</a>
+          <a href="menu.html" class="navbar__link">Menú</a>
+          <a href="#productos" class="navbar__link">Productos</a>
+          <a href="#horarios" class="navbar__link">Horarios</a>
+          <a href="#contacto" class="navbar__link navbar__link--cta">Contacto</a>
+        </nav>
+        <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
     <!-- HERO -->
     <section class="hero">
       <div class="hero__content">
@@ -38,11 +55,37 @@
     <section class="section" id="nosotros">
       <div class="container">
         <h2 class="section__title">¿Quiénes somos?</h2>
-        <p class="section__text">
-          Somos una cafetería familiar fundada en 2010. Nos especializamos en granos
-          de origen único, tostado propio y una atmósfera acogedora para trabajar,
-          estudiar o simplemente descansar.
-        </p>
+        <div class="about">
+          <div class="about__text">
+            <p class="section__text">
+              Somos una cafetería familiar fundada en 2010 en el corazón de Buenos Aires.
+              Nos especializamos en granos de origen único, tostado propio y una atmósfera
+              acogedora para trabajar, estudiar o simplemente descansar.
+            </p>
+            <p class="section__text" style="margin-top: 1rem;">
+              Cada taza que servimos es el resultado de un proceso cuidado desde el origen:
+              elegimos los granos, los tostamos en nuestro local y los preparamos con técnica
+              y dedicación. Creemos que un buen café puede cambiar el ritmo del día.
+            </p>
+          </div>
+          <div class="about__values">
+            <div class="value-card">
+              <span class="value-card__icon">🌱</span>
+              <h3 class="value-card__title">Origen único</h3>
+              <p class="value-card__text">Granos seleccionados de productores responsables de toda América.</p>
+            </div>
+            <div class="value-card">
+              <span class="value-card__icon">🔥</span>
+              <h3 class="value-card__title">Tostado propio</h3>
+              <p class="value-card__text">Controlamos cada etapa del tueste para garantizar consistencia y frescura.</p>
+            </div>
+            <div class="value-card">
+              <span class="value-card__icon">🤝</span>
+              <h3 class="value-card__title">Comunidad</h3>
+              <p class="value-card__text">Un espacio para conectar, crear y disfrutar junto a otros.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -96,11 +139,32 @@
     <section class="section section--alt" id="contacto">
       <div class="container">
         <h2 class="section__title">Contacto</h2>
-        <address class="contact">
-          <p>Av. Corrientes 1234, Buenos Aires</p>
-          <p>+54 11 4567-8901</p>
-          <p><a href="mailto:hola@cafedelcentro.com.ar">hola@cafedelcentro.com.ar</a></p>
-        </address>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="contact-info__title">Encontranos</h3>
+            <address class="contact">
+              <p>📍 Av. Corrientes 1234, CABA</p>
+              <p>📞 +54 11 4567-8901</p>
+              <p>✉️ <a href="mailto:hola@cafedelcentro.com.ar">hola@cafedelcentro.com.ar</a></p>
+            </address>
+          </div>
+          <form class="contact-form" onsubmit="return false;">
+            <h3 class="contact-info__title">Escribinos</h3>
+            <div class="form-group">
+              <label class="form-label" for="nombre">Nombre</label>
+              <input class="form-input" type="text" id="nombre" placeholder="Tu nombre" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" type="email" id="email" placeholder="tu@email.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mensaje">Mensaje</label>
+              <textarea class="form-input form-textarea" id="mensaje" placeholder="¿En qué te podemos ayudar?"></textarea>
+            </div>
+            <button type="submit" class="btn btn--full">Enviar mensaje</button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -141,6 +205,24 @@
         <p class="footer__credit">Hecho con café ☕ en Buenos Aires</p>
       </div>
     </footer>
+
+    <script>
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('navbar--scrolled', window.scrollY > 40);
+      });
+
+      // Mobile toggle
+      const toggle = document.querySelector('.navbar__toggle');
+      const nav    = document.querySelector('.navbar__nav');
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        nav.classList.toggle('navbar__nav--open');
+        toggle.classList.toggle('navbar__toggle--open');
+      });
+    </script>
 
   </body>
 </html>
