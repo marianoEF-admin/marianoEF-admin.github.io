@@ -4,42 +4,110 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Café del Centro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
 
-    <h1>Café del Centro</h1>
-    <p>Bienvenidos a nuestro rincón de café artesanal en el corazón de la ciudad.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content">
+        <span class="hero__eyebrow">Desde 2010 · Buenos Aires</span>
+        <h1 class="hero__title">Café del Centro</h1>
+        <p class="hero__subtitle">
+          Granos de origen único, tostado propio y un rincón para detenerse.
+        </p>
+        <a href="#productos" class="btn">Ver nuestra carta</a>
+      </div>
+      <div class="hero__bean-divider" aria-hidden="true">
+        <svg viewBox="0 0 400 24" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="12" x2="160" y2="12" stroke="#4A6741" stroke-width="1"/>
+          <ellipse cx="200" cy="12" rx="14" ry="8" fill="none" stroke="#C8A94A" stroke-width="1.5"/>
+          <line x1="186" y1="12" x2="214" y2="12" stroke="#C8A94A" stroke-width="1"/>
+          <line x1="240" y1="12" x2="400" y2="12" stroke="#4A6741" stroke-width="1"/>
+        </svg>
+      </div>
+    </section>
 
-    <hr />
+    <!-- QUIÉNES SOMOS -->
+    <section class="section" id="nosotros">
+      <div class="container">
+        <h2 class="section__title">¿Quiénes somos?</h2>
+        <p class="section__text">
+          Somos una cafetería familiar fundada en 2010. Nos especializamos en granos
+          de origen único, tostado propio y una atmósfera acogedora para trabajar,
+          estudiar o simplemente descansar.
+        </p>
+      </div>
+    </section>
 
-    <h2>¿Quiénes somos?</h2>
-    <p>
-      Somos una cafetería familiar fundada en 2010. Nos especializamos en granos
-      de origen único, tostado propio y una atmósfera acogedora para trabajar,
-      estudiar o simplemente descansar.
-    </p>
+    <!-- PRODUCTOS -->
+    <section class="section section--alt" id="productos">
+      <div class="container">
+        <h2 class="section__title">Nuestros productos</h2>
+        <ul class="product-list">
+          <li class="product-item">
+            <span class="product-item__name">Espresso</span>
+            <span class="product-item__desc">Simple y doble, de tueste medio-oscuro</span>
+          </li>
+          <li class="product-item">
+            <span class="product-item__name">Cappuccino artesanal</span>
+            <span class="product-item__desc">Con leche texturizada y arte latte</span>
+          </li>
+          <li class="product-item">
+            <span class="product-item__name">Latte</span>
+            <span class="product-item__desc">Con leche de avena, almendras o vaca</span>
+          </li>
+          <li class="product-item">
+            <span class="product-item__name">Medialunas y facturas</span>
+            <span class="product-item__desc">Frescas, de panadería propia</span>
+          </li>
+          <li class="product-item">
+            <span class="product-item__name">Tostados del día</span>
+            <span class="product-item__desc">Sándwiches y propuestas estacionales</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-    <h2>Nuestros productos</h2>
-    <ul>
-      <li>Espresso simple y doble</li>
-      <li>Cappuccino artesanal</li>
-      <li>Latte con leche de avena, almendras o vaca</li>
-      <li>Medialunas y facturas frescas</li>
-      <li>Tostados y sándwiches del día</li>
-    </ul>
+    <!-- HORARIOS -->
+    <section class="section" id="horarios">
+      <div class="container">
+        <h2 class="section__title">Horarios</h2>
+        <div class="hours">
+          <div class="hours__row">
+            <span class="hours__days">Lunes a viernes</span>
+            <span class="hours__time">7:00 – 21:00 hs</span>
+          </div>
+          <div class="hours__row">
+            <span class="hours__days">Sábados y domingos</span>
+            <span class="hours__time">9:00 – 18:00 hs</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Horarios</h2>
-    <p>Lunes a viernes: 7:00 hs – 21:00 hs</p>
-    <p>Sábados y domingos: 9:00 hs – 18:00 hs</p>
+    <!-- CONTACTO -->
+    <section class="section section--alt" id="contacto">
+      <div class="container">
+        <h2 class="section__title">Contacto</h2>
+        <address class="contact">
+          <p>Av. Corrientes 1234, Buenos Aires</p>
+          <p>+54 11 4567-8901</p>
+          <p><a href="mailto:hola@cafedelcentro.com.ar">hola@cafedelcentro.com.ar</a></p>
+        </address>
+      </div>
+    </section>
 
-    <h2>Contacto</h2>
-    <p>Dirección: Av. Corrientes 1234, Buenos Aires</p>
-    <p>Teléfono: +54 11 4567-8901</p>
-    <p>Email: <a href="mailto:hola@cafedelcentro.com.ar">hola@cafedelcentro.com.ar</a></p>
-
-    <hr />
-
-    <p>© 2025 Café del Centro. Todos los derechos reservados.</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+      <p>© 2025 Café del Centro. Todos los derechos reservados.</p>
+    </footer>
 
   </body>
 </html>

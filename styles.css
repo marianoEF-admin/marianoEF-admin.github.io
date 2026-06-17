@@ -1,0 +1,275 @@
+/* ============================================
+   CAFÉ DEL CENTRO — styles.css
+   Paleta: fondo oscuro-verdoso, acento dorado
+   Tipografía: Playfair Display + DM Sans
+   ============================================ */
+
+/* --- TOKENS --- */
+:root {
+  --color-bg:        #0D1410;
+  --color-bg-alt:    #1A2318;
+  --color-surface:   #2A3328;
+  --color-green:     #4A6741;
+  --color-gold:      #C8A94A;
+  --color-text:      #F0EDE6;
+  --color-text-muted:#A8A49E;
+  --color-link:      #C8A94A;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  6rem;
+
+  --max-width: 780px;
+  --radius:    4px;
+}
+
+/* --- RESET --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- BASE --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+address {
+  font-style: normal;
+}
+
+/* --- LAYOUT --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* --- HERO --- */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xl) var(--space-md) var(--space-lg);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 40%, #1e2e1a 0%, var(--color-bg) 100%);
+}
+
+.hero__eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 480px;
+  margin: 0 auto var(--space-md);
+}
+
+.hero__bean-divider {
+  width: 100%;
+  max-width: 400px;
+  margin-top: var(--space-lg);
+  opacity: 0.6;
+}
+
+/* --- BOTÓN --- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+  text-decoration: none;
+}
+
+/* --- SECCIONES --- */
+.section {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg);
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.section__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background-color: var(--color-gold);
+}
+
+.section__text {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 560px;
+}
+
+/* --- LISTA DE PRODUCTOS --- */
+.product-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-surface);
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+.product-item__name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.product-item__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+/* --- HORARIOS --- */
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.hours__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--color-green);
+}
+
+.hours__days {
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.hours__time {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-gold);
+}
+
+/* --- CONTACTO --- */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-surface);
+  text-align: center;
+  padding: var(--space-md);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .product-item {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .product-item__desc {
+    text-align: left;
+  }
+
+  .hours__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+}
