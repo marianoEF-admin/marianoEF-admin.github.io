@@ -1,0 +1,216 @@
+/* ============================================
+   CAFÉ DEL CENTRO — menu.css
+   Estilos exclusivos de la página del menú
+   ============================================ */
+
+/* --- HERO DEL MENÚ --- */
+.menu-hero {
+  min-height: 36vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(var(--space-xl) + 64px) var(--space-md) var(--space-lg);
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 60%, #1a2e1a 0%, var(--color-bg) 100%);
+}
+
+.menu-hero__eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.menu-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.menu-hero__sub {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+/* --- MAIN CONTENEDOR --- */
+.menu-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* --- FILTROS --- */
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-surface);
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid var(--color-surface);
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-green);
+  color: var(--color-text);
+}
+
+.filter-btn--active {
+  background-color: var(--color-green);
+  border-color: var(--color-green);
+  color: var(--color-text);
+}
+
+/* --- CATEGORÍAS --- */
+.menu-category {
+  margin-bottom: var(--space-lg);
+}
+
+.menu-category__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.menu-category__icon {
+  font-size: 1.2rem;
+}
+
+/* --- GRID DE CARDS --- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-sm);
+}
+
+/* --- CARD --- */
+.menu-card {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-surface);
+  border-radius: calc(var(--radius) * 2);
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.menu-card:hover {
+  border-color: var(--color-green);
+  transform: translateY(-2px);
+}
+
+.menu-card--featured {
+  border-color: rgba(200, 169, 74, 0.3);
+}
+
+.menu-card--featured:hover {
+  border-color: var(--color-gold);
+}
+
+.menu-card__badge {
+  background-color: var(--color-gold);
+  color: var(--color-bg);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+}
+
+.menu-card__body {
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.menu-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.menu-card__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.menu-card__price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+.menu-card__desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* --- TAGS --- */
+.menu-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  background-color: rgba(74, 103, 65, 0.15);
+  border: 1px solid rgba(74, 103, 65, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.tag--gold {
+  color: var(--color-gold);
+  background-color: rgba(200, 169, 74, 0.1);
+  border-color: rgba(200, 169, 74, 0.3);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-filters {
+    gap: 0.4rem;
+  }
+}
